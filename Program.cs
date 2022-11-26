@@ -9,6 +9,7 @@ Console.WriteLine(" Введите число");
 a = Convert.ToInt32(Console.ReadLine());
 if (a > 100){
     Console.WriteLine(" Не корректное число");
+    break;
 }
 
 if (a > max) {
