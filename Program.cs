@@ -1,34 +1,25 @@
-﻿Console.WriteLine("Введите минимум трехзначное число до ''999999''");
-int a = Convert.ToInt32(Console.ReadLine());
-int a1 = 0;
+﻿
+int max = 0;
+int max2 = 0;
+int a = 1;
+int temp = 0;
 
-    if (a < 100 ){
-        Console.WriteLine("Третьей цифры нет");
-    
-    }
-    
-    else if (a <= 999){
-        
-        a1 = a % 10;
-        Console.Write($"Третья цифра числа {a}: {a1}");
-    }
-    else if (a <= 9999) {
-        a1 = a % 100;
-        a1 = a1 / 10;
-        Console.Write($"Третья цифра числа {a}: {a1}");
-    }    
-        
-    else if (a <= 99999) {
-         
-         a1 = a / 100;
-         a1 = a1 % 10;
-        Console.Write($"Третья цифра числа {a}: {a1}");
-    }
+while (a != 0) {
+Console.WriteLine(" Введите число");
+a = Convert.ToInt32(Console.ReadLine());
+if (a > 100){
+    Console.WriteLine(" Не корректное число");
+}
 
-     else {
-        a1 = a / 1000;
-        a1 = a1 % 10;
-        Console.Write($"Третья цифра числа {a}: {a1}");
-     }   
-    
+if (a > max) {
+    temp = max;
+    max = a;
+    max2 = temp;
+}
+if (a > max2 && a != max) {
+max2 = a;
+}
+
+Console.WriteLine($"Второе максимальное: {max2}");
+}
 
