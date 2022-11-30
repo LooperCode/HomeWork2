@@ -17,7 +17,7 @@ if (a > max) {
     max = a;
     
 }
-if (a > max2 && a != max) {
+else if (a > max2) {
 max2 = a;
 }
 
